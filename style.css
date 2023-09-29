@@ -1,0 +1,67 @@
+:root {
+  overflow: hidden;
+  --full-height: 100vh;
+  --full-width: 100vw;
+  --left-width: 40vw;
+  --right-width: 60vw;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.left-pane {
+  height : var(--full-height);
+  width : var(--left-width);
+  background-image: url(./assets/leftBgImage.jpg);
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}       
+
+.right-pane {
+  height : var(--full-height);
+  width : var(--right-width);
+
+
+}
+
+.left-pane-ribbon {
+  background-color: black;
+
+  position: relative;
+  top: 10rem;
+  opacity: 80%;
+
+  height: 15vh;
+  width: var(--left-width);
+
+  display: flex;
+  justify-content: center;
+}
+
+.catfe {
+  margin: 0;
+  padding: 0;
+  
+  font: url(./assets/TruenoLightItalic-OoMo.otf);
+  font-size: 8rem;
+  color: #D4D7D6;
+}
+
+.credits-text {
+  position: relative;
+  top: 80%;
+  font-size: 1em;
+  color: darkgray;
+  text-decoration: none;
+}
+
+.credits-text > a {
+  color: darkgray;
+}
