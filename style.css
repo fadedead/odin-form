@@ -6,7 +6,13 @@
   --right-width: 60vw;
 }
 
+@font-face {
+  font-family: 'Trueno';
+  src: url('./assets/TruenoLightItalic-OoMo.otf') format('opentype');
+}
+
 body {
+  font-family: 'YourFontName', sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
@@ -28,7 +34,6 @@ body {
   height : var(--full-height);
   width : var(--right-width);
   
-  /* padding: 24px;/ */
   background-color: #D4D7D6;
   
 }
@@ -45,14 +50,15 @@ body {
   
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .catfe {
   margin: 0;
   padding: 0;
+  top: 0;
   
-  font: url(./assets/TruenoLightItalic-OoMo.otf);
-  font-size: 8rem;
+  font-size: 6em;
   color: #D4D7D6;
 }
 
@@ -73,14 +79,14 @@ body {
 }
 
 .main-title {
-  font-size: 2rem;
+  font-size: 2.5em;
 }
 
 .singup-form {
   display: flex;
   flex-direction: column;
   justify-content: space-inbetween;
-  gap: 12px;
+  gap: 14px;
   
   border: 0;
   padding: 12px 0px 12px 0px;
@@ -88,14 +94,21 @@ body {
 }
 
 legend {
-  font-size: 1.5em;
+  font-size: 2em;
+  padding: 0;
 }
 
 form > fieldset > div {
   display: flex;
   justify-content: flex-start;
-  gap: 48px;
+  gap: 84px;
+  padding-top: 12px;
 }
+
+label {
+  font-size: 1em;
+}
+
 
 form > fieldset > div > div {
   display: flex;
@@ -106,8 +119,8 @@ input {
   border: 1px solid gray;
   border-radius: 4px;
 
-  height: clamp(12px,24px,32px);
-  width: max(8em, 200px);
+  height: clamp(14px,32px,48px);
+  width: max(10em, 300px);
 }
 
 input:not(:placeholder-shown):invalid {
@@ -118,4 +131,23 @@ input:focus {
   outline: none;
   border: 1px solid #483E33;
   box-shadow: 0px 1px 0.2em rgba(0, 0, 0, 0.45);
+}
+
+.submit-pane {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+button {
+  height: 4rem;
+  width: 12rem;
+  font-size: 1.5em;
+  border-radius: 1em;
+
+  background-color: #906F4A;
+
+  position: relative;
+  transition: transform 0.3s ease-in-out;
 }

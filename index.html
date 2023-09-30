@@ -34,31 +34,46 @@
             <div >
               <div >
                 <label for="email">EMAIL</label>
-                <input type="email" name="email-id" id="email" placeholder="" required>
+                <input type="email" name="email-id" id="email" title="Enter a valid email" placeholder="" required>
               </div>
               <div >
                 <label for="phone-number">PHONE</label>
-                <input type="text" name="phone-number" id="phone-number" placeholder="" pattern="^\d{10}$">
+                <input type="text" name="phone-number" id="phone-number" placeholder="" title="Phonenumber should be made of 10 numbers" pattern="^\d{10}$">
               </div>
             </div>
             <div >
               <div >
                 <label for="password">PASSWORD</label>
-                <input type="password" name="password" id="password" placeholder="" required>
+                <input type="password" name="password" id="password" placeholder="" title="
+                Password Strength Requirement: 
+                1 uppercase letter 
+                1 lowercase letter
+                1 digit
+                1 special character (@, $, !, %, *, ?, or &)
+                a minimum length of 8 characters" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>
               </div>
               <div >
                 <label for="cpassword">CONFIRM PASSWORD</label>
-                <input type="password" name="cpassword" id="cpassword" placeholder="" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$
-                ">
+                <input type="password" name="cpassword" id="cpassword" placeholder="" title="
+                Password Strength Requirement: 
+                1 uppercase letter 
+                1 lowercase letter
+                1 digit
+                1 special character (@, $, !, %, *, ?, or &)
+                a minimum length of 8 characters" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$
+                " required>
               </div>
             </div>
-
+            
           </fieldset>
-
+          
         </form>
       </div> 
       <div class="submit-pane">
+        <button id="submit">Create Account</button>
       </div>
+      <script src="./submit.js"></script>
     </div>
   </body>
-</html>
+  </html>
+  
