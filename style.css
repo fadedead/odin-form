@@ -18,7 +18,7 @@ body {
   background-image: url(./assets/leftBgImage.jpg);
   background-size: cover;
   background-position: center;
-
+  
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -27,20 +27,22 @@ body {
 .right-pane {
   height : var(--full-height);
   width : var(--right-width);
-
-
+  
+  /* padding: 24px;/ */
+  background-color: #D4D7D6;
+  
 }
 
 .left-pane-ribbon {
   background-color: black;
-
+  
   position: relative;
   top: 10rem;
   opacity: 80%;
-
+  
   height: 15vh;
   width: var(--left-width);
-
+  
   display: flex;
   justify-content: center;
 }
@@ -64,4 +66,56 @@ body {
 
 .credits-text > a {
   color: darkgray;
+}
+
+.form-pane {
+  padding: 24px;
+}
+
+.main-title {
+  font-size: 2rem;
+}
+
+.singup-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-inbetween;
+  gap: 12px;
+  
+  border: 0;
+  padding: 12px 0px 12px 0px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+legend {
+  font-size: 1.5em;
+}
+
+form > fieldset > div {
+  display: flex;
+  justify-content: flex-start;
+  gap: 48px;
+}
+
+form > fieldset > div > div {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  border: 1px solid gray;
+  border-radius: 4px;
+
+  height: clamp(12px,24px,32px);
+  width: max(8em, 200px);
+}
+
+input:not(:placeholder-shown):invalid {
+  border: 1px solid red;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid #483E33;
+  box-shadow: 0px 1px 0.2em rgba(0, 0, 0, 0.45);
 }
